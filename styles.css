@@ -1,0 +1,206 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #2c3e50;
+    --background-color: #f5f6fa;
+    --text-color: #333;
+    --border-color: #ddd;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --danger-color: #c0392b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.info-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+#results {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.info-section ul {
+    list-style-type: none;
+}
+
+.info-section li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.info-section li:before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+.recommendations {
+    margin-top: 15px;
+}
+
+.recommendations h4 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.recommendations ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.recommendations li {
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.recommendations li:before {
+    content: "→";
+    color: var(--primary-color);
+    position: absolute;
+    left: -20px;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 24px;
+    }
+    
+    .tooltip-text {
+        width: 150px;
+    }
+}

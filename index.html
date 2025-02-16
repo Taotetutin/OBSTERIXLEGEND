@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Riesgo de Parto Prematuro</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Riesgo de Parto Prematuro</h1>
+        <form id="riskForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="gestationalWeeks">Semanas de gestación:</label>
+                    <div class="custom-roller">
+                        <input type="number" id="gestationalWeeks" min="22" max="34" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="gestationalDays">Días de gestación:</label>
+                    <div class="custom-roller">
+                        <input type="number" id="gestationalDays" min="0" max="6" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cervicalLength">Longitud cervical (mm):</label>
+                <div class="custom-roller">
+                    <input type="number" id="cervicalLength" min="0" max="50" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="fetusCount">Número de fetos:</label>
+                <select id="fetusCount" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="switch-label">
+                    <span>Presencia de contracciones:</span>
+                    <label class="switch">
+                        <input type="checkbox" id="hasContractions">
+                        <span class="slider">
+                            <span class="slider-text left">No</span>
+                            <span class="slider-text right">Sí</span>
+                        </span>
+                    </label>
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="switch-label">
+                    <span>Antecedente de parto prematuro previo:</span>
+                    <label class="switch">
+                        <input type="checkbox" id="hasPreviousPretermBirth">
+                        <span class="slider">
+                            <span class="slider-text left">No</span>
+                            <span class="slider-text right">Sí</span>
+                        </span>
+                    </label>
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="switch-label">
+                    <span>Antecedente de rotura de membranas:</span>
+                    <label class="switch">
+                        <input type="checkbox" id="hasMembraneRupture">
+                        <span class="slider">
+                            <span class="slider-text left">No</span>
+                            <span class="slider-text right">Sí</span>
+                        </span>
+                    </label>
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="switch-label">
+                    <span>Antecedente de cirugía cervical:</span>
+                    <label class="switch">
+                        <input type="checkbox" id="hasCervicalSurgery">
+                        <span class="slider">
+                            <span class="slider-text left">No</span>
+                            <span class="slider-text right">Sí</span>
+                        </span>
+                    </label>
+                </label>
+            </div>
+            <button type="submit">Calcular Riesgo</button>
+        </form>
+        <div id="result"></div>
+        <footer>
+            <p>Derechos reservados a MiMaternoFetal.cl</p>
+        </footer>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
